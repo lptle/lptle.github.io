@@ -1,0 +1,50 @@
+<html>
+    <head>
+			<script src="https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js"></script>
+			<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+			<script src="js/widget.js"></script>
+			<link rel="stylesheet" href="site.css">
+    </head>
+    <body style="line-height: 27px;">
+			<h1>Date Picker</h1>
+			<div><span>Title: </span><input id="title" value="" /> <span id="chCounter"></span></span></div>
+			<div><span>Type</span><select id="type">
+				<option value="single" selected>single</option>
+				<option value="range">range</option>
+			</select></div>
+			<div><span>Min day: <input type="date" id="start" /></span></div>
+			<div><span>Max day: <input type="date" id="end" /></span></div>
+			<div><button id="submit">Send</button></div>
+			<hr>
+			<h1>Schedule Slot List</h1>
+			<div><span>Title: </span><input id="s_title" value="" /> <span id="s_chCounter"></span></span></div>
+			<div><span>firstDayOfTheWeek: </span><select id="s_firstDayOfTheWeek">
+				<option value="sun">sun</option>
+				<option value="mon" selected>mon</option>
+			</select>
+			</div>
+			<div><span>Start slots day: <input type="date" id="s_start" /></span></div>
+			<div><span>Number of days: </span><input type="number" id="s_days" value="1"/></div>
+			<div><span>-> days gap: </span><input type="number" id="s_gap" value="0"/></div>
+			<div><span>Slots per day: </span><input type="number" id="s_perDay" value="1"/> <span>-> random: </span><input id="s_perDayRandom" type="checkbox"></div>
+			<div><span>Slot start time: </span><input type="time" id="s_startTime"/></div>
+			<div><span>Slot title: </span><select id="s_title">
+				<option value="0">Off</option>
+				<option value="1" selected>On</option>
+				<option value="2">Random</option>
+			</select></div>
+			<div><span>Slot description: </span><select id="s_description">
+				<option value="0">Off</option>
+				<option value="1" selected>On</option>
+				<option value="2">Random</option>
+			</select></div>
+			<div>
+				<span>Slot image: </span><input id="s_imageUrl" type="checkbox">
+				<span>-> Not all slots: </span><input id="s_imageRandom" type="checkbox">
+			</div>
+			<div><button id="s_submit">Send</button></div>
+			<hr>
+			Output: <button id="copyText">Copy</button>
+			<div><textarea id="outputArea"></textarea></div>
+    </body>
+</html>
