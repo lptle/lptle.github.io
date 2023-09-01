@@ -6,6 +6,25 @@
 <meta name="keywords" content="html tutorial template">
 </head>
 <body>
-What is code?
+	<p>Code value:</p>
+    <p id="codeValue"></p>
+
+    <script>
+        // Function to extract URL parameter values
+        function getParameterValue(paramName, url) {
+            const params = new URLSearchParams(new URL(url).search);
+            return params.get(paramName);
+        }
+
+        // Get the current URL from the browser's address bar
+        const currentURL = window.location.href;
+        
+        // Get the "code" value from the current URL
+        const codeValue = getParameterValue("code", currentURL);
+
+        // Update the HTML element with the extracted "code" value
+        const codeValueElement = document.getElementById("codeValue");
+        codeValueElement.textContent = codeValue;
+    </script>
 </body>
 </html>
